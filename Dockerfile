@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 RUN apt-get update -y
 ENV DEBIAN_FRONTEND=noninteractive
-RUN apt-get install apache2 -y
+RUN apt-get install apache2-utils
 RUN echo "<h1> Hello Docker</h1>" > /var/www/html/index.html
 RUN apt-get clean
 EXPOSE 80
